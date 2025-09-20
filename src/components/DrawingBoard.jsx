@@ -10,7 +10,7 @@ export default function DrawingBoard() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   }, []);
 
@@ -30,14 +30,14 @@ export default function DrawingBoard() {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.fillRect(x, y, 10, 10); // blocky pixels
   };
 
   const clearCanvas = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     setPrediction(null);
   };
