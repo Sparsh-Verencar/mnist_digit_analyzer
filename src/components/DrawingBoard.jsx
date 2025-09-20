@@ -56,7 +56,7 @@ export default function DrawingBoard() {
 
     // Send to backend
     try {
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch("https://mnist-backend-ju5b.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: imageData }),
